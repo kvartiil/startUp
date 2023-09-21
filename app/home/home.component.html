@@ -1,0 +1,25 @@
+<!-- This HTML is included in my app component via the `templateUrl` property -->
+
+.
+<div class="tutorial">
+  This is called component composition. When writing HTML in Angular, you can refer to other components in your app according to their "selector".
+
+  This is how you can break down a complex app into lots of little isolated pieces.
+  </div>
+<hello style="border:1px solid green;display:block;"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div>hi</div>
+
+<div class="tutorial">
+  Here, Angular uses the *ngFor attribute (called a structural attribute) to stamp out the div once for every person in the listOfPeople
+</div>
+<div *ngFor="let person of listOfPeople;let i = index">{{person}}</div>
+
+
+<div class="tutorial">
+  two curly braces {{ end up being "interpolated" by looking in the javascript to figure out what to render, and then rendering it again when it changes.
+  </div>
+
+  <button (click)="addPerson()">Give me a new person</button>
